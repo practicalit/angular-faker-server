@@ -1,11 +1,17 @@
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Price</th>
-        <th>City</th>
-    </tr>
-    <tr *ngFor="let product of products">
-        <td>{{product.name}}</td><td> {{product.price}}</td>
-        <td>{{product.address.city}}</td>
-    </tr>
-</table>
+
+<div fxLayout="row">
+    <div fxFlex>First item in row</div>
+    <div fxFlex>Second item in row</div>
+    <div fxLayout="column">
+        <div fxFlex>First item in column</div>
+        <div fxFlex>Second item in column</div>
+    </div>
+</div>
+<div fxLayout="row">
+    <div fxFlex>First item in row</div>
+    <div fxFlex>Second item in row</div>
+    <div fxLayout="column">
+        <div fxFlex>First item in column</div>
+        <div fxFlex>Second item in column</div>
+    </div>
+</div>
