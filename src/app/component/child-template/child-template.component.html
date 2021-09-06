@@ -1,0 +1,7 @@
+<button (click)="expanded=!expanded">Click for clock</button>
+<div *ngIf="expanded">
+    <!-- this will be taking what has been added in the grand parent
+    take a look on templates.component.html
+    -->
+    <ng-content *ngTemplateOutlet="content"></ng-content>
+</div>

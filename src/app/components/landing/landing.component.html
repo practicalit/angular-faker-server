@@ -8,6 +8,26 @@
   </p>
   <p>
     npm run server
-  </p>  
+  </p> 
+  <input type="checkbox" [checked]="checked" />
+  <div *ngIf="checked" (change)="handleChange()">Show and hide</div> 
   <p><a href="/list">List Products</a></p>
   <p><a href="/tiles">Tiles</a></p>
+  <div>
+    <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>
+  </div>
+
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Here I am!
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+    </div>
+  </ng-template>

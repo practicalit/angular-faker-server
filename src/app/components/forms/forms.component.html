@@ -1,0 +1,16 @@
+<form [formGroup]="formsGroup">
+    <div class="form-container">
+        <div class="control">
+            Name <input type="text" formControlName="name" />
+            <div *ngIf="formsGroup.get('name').hasError('required') &&
+            formsGroup.get('name').dirty" 
+            class="error">Name is required</div>
+        </div>
+        <div class="control">
+            Married <input type="checkbox" formControlName="salaried" />
+        </div>
+        <div>
+            <a [routerLink]="" (click)="closeForms()">X</a>
+        </div>
+    </div>
+</form>

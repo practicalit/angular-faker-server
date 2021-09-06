@@ -1,0 +1,36 @@
+<ng-container>
+    <div class="container">
+        <ng-container *ngIf="false; else tempContent">
+            here
+        </ng-container>
+        <h1>Hello container</h1>
+    </div>
+</ng-container>
+
+<ng-template #tempContent>
+    <div class="container">
+        <h1>Hello template</h1>
+    </div>
+</ng-template>
+
+<div class="container">
+    <button (click)="showTime = !showTime" type="button">Click for show</button>
+</div>   
+
+<!-- 
+    This is original approach where the <app-clock> is projected to 
+    <app-child-template>. And the app-child-template is using ng-content
+    to get the content from the <app-child-template>. it is problematic
+    in that the clock is not instantiated when the parent is called.
+<div class="container">
+    <app-child-template *ngIf="showTime">
+        <app-clock></app-clock>
+    </app-child-template>
+</div>
+-->
+<ng-template #content>
+    <app-clock></app-clock>
+</ng-template>
+<div class="container">
+    <app-child-template *ngIf="showTime" [content]="content"></app-child-template>
+</div>
