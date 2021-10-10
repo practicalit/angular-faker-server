@@ -39,9 +39,9 @@ addForm() {
 submitForm() {
   if (!this.formArray.valid) {
     console.log("into value");
-    this.formArray.get('regForms').controls.forEach(control => {
-      control.get('name').markAsDirty();
-    })
+    // this.formArray.get('regForms').controls.forEach(control => {
+    //   control.get('name').markAsDirty();
+    // })
   } else {
     console.log(this.formArray.value);
   }

@@ -1,8 +1,8 @@
 <form [formGroup]="formArray">
-    <div *ngFor="let form of formArray.get('regForms').controls; let i=index">
+    <!-- <div *ngFor="let form of formArray.get('regForms').controls; let i=index">
         <app-forms [index]="i" [formsGroup]="form" (formClosed)="formClosed($event)">
         </app-forms>
-    </div>
+    </div> -->
     <div>
         <a [routerLink]="" (click)="addForm()">Add Form</a>
         <button type="button" (click)="submitForm()">Submit</button>

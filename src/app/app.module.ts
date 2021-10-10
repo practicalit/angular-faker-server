@@ -21,6 +21,10 @@ import { ParentFormComponent } from './components/parent-form/parent-form.compon
 import { TemplatesComponent } from './components/templates/templates.component';
 import { ChildTemplateComponent } from './component/child-template/child-template.component';
 import { ClockComponent } from './component/clock/clock.component';
+import { SourceComponent } from './components/subject/source/source.component';
+import { ConsumerComponent } from './components/subject/consumer/consumer.component';
+import { HolderComponentComponent } from './components/subject/holder-component/holder-component.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,9 @@ import { ClockComponent } from './component/clock/clock.component';
     TemplatesComponent,
     ChildTemplateComponent,
     ClockComponent,
+    SourceComponent,
+    ConsumerComponent,
+    HolderComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,8 @@ import { ClockComponent } from './component/clock/clock.component';
     MatFormFieldModule,
     FlexLayoutModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

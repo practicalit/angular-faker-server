@@ -1,0 +1,7 @@
+.skip {
+    position: absolute;
+    left: -1000px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}

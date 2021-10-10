@@ -1,0 +1,8 @@
+<form [formGroup]="form">
+    Any data<input type="text" formControlName="content" /> <br />
+    <span *ngIf="isSubmitted && form.get('content').errors && 
+    form.get('content').hasError('required')" [ngStyle]="{'color': 'red'}">Error happend</span>
+    <br />
+    <button type="button" (click)="submitter()">Submit</button>
+</form>
+<!-- <button (click)="clickHandler()">Clicker</button> -->

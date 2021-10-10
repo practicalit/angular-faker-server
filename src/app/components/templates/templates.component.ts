@@ -9,6 +9,7 @@ export class TemplatesComponent implements OnInit {
 
   constructor() { }
   showDiv: boolean = false;
+  showTime: boolean = false;
   ngOnInit(): void {
     
     console.log("parent component called");
